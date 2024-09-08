@@ -18,23 +18,23 @@ A modern, responsive online exam platform featuring sign-up/login functionality,
 
 ## Screenshots
 
-### Exam Page
-![Exam Page](./screens/exam-page.png)
+### Sign-Up Page
+![Sign-Up Page](./screens/sign-up-page.png)
 
 ### Login Page
 ![Login Page](./screens/login-page.png)
 
+### Welcome Page
+![Welcome Page](./screens/welcome-page.png)
+
+### Exam Page
+![Exam Page](./screens/exam-page.png)
+
 ### Result Page
 ![Result Page](./screens/result-page.png)
 
-### Sign-Up Page
-![Sign-Up Page](./screens/screens/sign-up-page.png)
-
 ### Time-Out Page
 ![Time-Out Page](./screens/time-out-page.png)
-
-### Welcome Page
-![Welcome Page](./screens/welcome-page.png)
 
 ## Project Structure
 
