@@ -106,12 +106,11 @@ function showLoginForm() {
   const signupForm = document.getElementById("signupForm");
   const loginForm = document.getElementById("loginForm");
 
-  signupForm.classList.remove("slide-in-right");
-  signupForm.classList.add("slide-out-left");
+  signupForm.classList.remove("active");
+  signupForm.style.opacity = 0;
 
-  loginForm.classList.remove("slide-out-right");
-  loginForm.classList.add("slide-in-right");
   loginForm.classList.add("active");
+  loginForm.style.opacity = 1;
 }
 
 // Sign Up Animation
@@ -119,10 +118,9 @@ function showSignupForm() {
   const signupForm = document.getElementById("signupForm");
   const loginForm = document.getElementById("loginForm");
 
-  loginForm.classList.remove("slide-in-right");
-  loginForm.classList.add("slide-out-right");
+  loginForm.classList.remove("active");
+  loginForm.style.opacity = 0;
 
-  signupForm.classList.remove("slide-out-left");
-  signupForm.classList.add("slide-in-left");
   signupForm.classList.add("active");
+  signupForm.style.opacity = 1;
 }
