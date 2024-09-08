@@ -1,3 +1,4 @@
+/* Main Style */
 body {
   color: #333;
   display: flex;
@@ -39,7 +40,8 @@ body {
 }
 
 .btn {
-  width: 200px;
+  width: 240px;
+  font-weight: bold;
   height: 50px;
   border-radius: 25px;
   outline: none;
@@ -57,7 +59,11 @@ body {
 
 .btn:hover {
   background-position: right;
-  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.btn i {
+  margin-right: 10px;
+  font-size: 1.2rem;
 }
 
 /* Animation Key Frames */
@@ -93,6 +99,7 @@ body {
   }
 }
 
+/* Media Queries for Responsiveness */
 @media screen and (max-width: 900px) {
   .timeout-gif {
     width: 150px;
@@ -108,13 +115,12 @@ body {
   }
 
   .btn {
-    width: 180px;
+    width: 240px;
     height: 45px;
     font-size: 1rem;
   }
 }
 
-/* Media Queries for Responsiveness */
 @media screen and (max-width: 600px) {
   body {
     padding: 20px;
@@ -134,7 +140,7 @@ body {
   }
 
   .btn {
-    width: 160px;
+    width: 210px;
     height: 40px;
     font-size: 0.9rem;
   }
@@ -150,7 +156,7 @@ body {
   }
 
   .btn {
-    width: 150px;
+    width: 180px;
     height: 38px;
     font-size: 0.8rem;
   }

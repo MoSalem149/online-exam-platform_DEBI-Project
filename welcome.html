@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/welcome.css" />
   </head>
@@ -22,7 +26,9 @@
         <h1>Welcome to the Exam</h1>
         <p>Click the button below to start your exam.</p>
         <a href="exam.html" onclick="disableBackButton()"
-          ><button class="btn">Start Exam</button></a
+          ><button class="btn">
+            <i class="fas fa-check"></i> Start Exam
+          </button></a
         >
       </div>
       <div class="img">
@@ -31,6 +37,7 @@
           alt="Online Test Image"
         />
       </div>
+      <script src="js/goBackButtonDisable.js"></script>
     </div>
   </body>
 </html>

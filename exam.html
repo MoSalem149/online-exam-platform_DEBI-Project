@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Examination</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="css/exam.css" />
+  </head>
+  <body>
+    <div class="exam-page">
+      <header class="exam-header">
+        <h1>Online Examination</h1>
+        <div id="user-info">
+          <span id="student-name">Name: Unknown</span>
+          <span id="student-id">ID: Unknown</span>
+        </div>
+        <div class="progress-bar">
+          <progress id="exam-progress" value="0" max="100"></progress>
+          <span id="progress-text">0% Completed</span>
+        </div>
+        <div id="timer">10:00</div>
+      </header>
+
+      <div class="exam-body">
+        <nav class="sidebar">
+          <h3>Flagged Questions</h3>
+          <ul id="flagged-questions"></ul>
+          <div class="submit-container">
+            <button id="submit-btn" class="control-btn">
+              <i class="bi bi-check-circle"></i> Submit
+            </button>
+          </div>
+        </nav>
+
+        <main class="exam-container">
+          <div class="question-section">
+            <div id="question-container" class="question-box"></div>
+            <div id="answers-container" class="answers-box"></div>
+          </div>
+
+          <div class="controls">
+            <button id="prev-btn" class="control-btn">
+              <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <button id="flag-btn" class="control-btn">
+              <i class="fas fa-flag"></i> Flag
+            </button>
+            <button id="next-btn" class="control-btn">
+              Next <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="js/goBackButtonDisable.js"></script>
+    <script src="js/exam.js"></script>
+  </body>
+</html>

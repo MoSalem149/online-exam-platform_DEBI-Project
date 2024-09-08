@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -21,7 +25,11 @@
       <div class="message-content">
         <h2>Time is out, sorry!</h2>
         <p>Your time has expired. Please retake the exam.</p>
-        <a href="exam.html"><button class="btn">Retake the Exam</button></a>
+        <a href="exam.html" onclick="localStorage.removeItem('remainingTime')">
+          <button class="btn">
+            <i class="fas fa-redo"></i> Retake the Exam
+          </button>
+        </a>
       </div>
     </div>
   </body>

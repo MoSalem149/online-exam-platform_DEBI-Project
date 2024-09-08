@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -22,7 +26,9 @@
         <p>Name: <span id="studentName"></span></p>
         <p>ID: <span id="studentID"></span></p>
         <p>Score: <span id="studentScore"></span></p>
-        <a href=""><button class="btn">Return Home</button></a>
+        <a href="index.html" onclick="localStorage.removeItem('remainingTime')">
+          <button class="btn"><i class="fas fa-home"></i> Return Home</button>
+        </a>
       </div>
       <div class="img">
         <img src="assets/images/png/results-img.png" alt="Result Image" />

@@ -1,3 +1,4 @@
+/* Main Style */
 body {
   color: #333;
   display: flex;
@@ -32,14 +33,16 @@ body {
 }
 
 .result-content p {
-  font-size: 1.5rem;
-  color: #555;
+  font-size: 1.4rem;
+  color: #444;
   margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .result-content span {
   font-weight: bold;
-  color: #333;
+  color: #32be8f;
+  font-size: 1.5rem;
 }
 
 .result-content .score-img {
@@ -71,6 +74,11 @@ body {
 
 .btn:hover {
   background-position: right;
+}
+
+.btn i {
+  margin-right: 10px;
+  font-size: 1.2rem;
 }
 
 /* Animation Key Frames */
@@ -145,12 +153,16 @@ body {
   }
 
   .result-content p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 
+  .result-content span {
+    font-size: 1.3rem;
+  }
+
   .btn {
-    width: 180px;
+    width: 210px;
     font-size: 1.1rem;
   }
 
@@ -172,7 +184,11 @@ body {
   }
 
   .result-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .result-content span {
+    font-size: 1.1rem;
   }
 
   .result-content {
@@ -182,7 +198,7 @@ body {
   }
 
   .btn {
-    width: 150px;
+    width: 180px;
     font-size: 1rem;
     padding: 12px;
   }
