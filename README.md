@@ -16,6 +16,26 @@ A modern, responsive online exam platform featuring sign-up/login functionality,
 - **CSS3**: For styling, animations, and layout, ensuring a responsive design.
 - **JavaScript**: For handling dynamic functionality such as form validation, quiz logic, and data storage using `localStorage`.
 
+## Screenshots
+
+### Exam Page
+![Exam Page](./screens/exam-page.png)
+
+### Login Page
+![Login Page](./screens/login-page.png)
+
+### Result Page
+![Result Page](./screens/result-page.png)
+
+### Sign-Up Page
+![Sign-Up Page](./screens/screens/sign-up-page.png)
+
+### Time-Out Page
+![Time-Out Page](./screens/time-out-page.png)
+
+### Welcome Page
+![Welcome Page](./screens/welcome-page.png)
+
 ## Project Structure
 
 ### HTML Files:
