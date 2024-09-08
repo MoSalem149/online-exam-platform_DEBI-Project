@@ -53,7 +53,7 @@ A modern, responsive online exam platform featuring sign-up/login functionality,
 - **`exam.css`**: Styling for the main exam interface, including the question container, progress bar, and flagged questions.
 - **`timeout.css`**: Styling for the timeout page that shows when the exam time expires.
 - **`result.css`**: Styling for the result page that displays the user's score.
-- - **`welcome.css`**: Styling for the welcome page that displays the welcome message for the user.
+- **`welcome.css`**: Styling for the welcome page that displays the welcome message for the user.
 
 ### JavaScript Files:
 
