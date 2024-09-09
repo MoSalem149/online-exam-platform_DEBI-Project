@@ -176,27 +176,29 @@ window.onload = function () {
 
   const storedStudentName = localStorage.getItem("studentName");
   const storedStudentID = localStorage.getItem("studentID");
+  const storedStudentImage = localStorage.getItem("studentImage"); // Get image from localStorage
 
-  const loggedInStudentName = storedStudentName
-    ? storedStudentName
-    : "John Doe";
-  const loggedInStudentID = storedStudentID ? storedStudentID : "67890";
+  const loggedInStudentName = storedStudentName ? storedStudentName : "Unknown";
+  const loggedInStudentID = storedStudentID ? storedStudentID : "Unknown";
 
-  if (storedStudentID !== loggedInStudentID) {
-    localStorage.removeItem("remainingTime");
-    localStorage.setItem("studentName", loggedInStudentName);
-    localStorage.setItem("studentID", loggedInStudentID);
-    timerDuration = 10 * 60;
-
-    startTimer();
-  }
-
+  // Set student name and ID
   document.getElementById(
     "student-name"
   ).textContent = `Name: ${loggedInStudentName}`;
   document.getElementById(
     "student-id"
   ).textContent = `ID: ${loggedInStudentID}`;
+
+  // Set the student image if it exists
+  if (storedStudentImage) {
+    const imgElement = document.createElement("img");
+    imgElement.src = storedStudentImage;
+    imgElement.alt = "Student Image";
+    imgElement.style.width = "50px"; // Adjust the size as needed
+    imgElement.style.height = "50px";
+    imgElement.style.borderRadius = "50%"; // Make it circular
+    document.getElementById("user-info").appendChild(imgElement);
+  }
 
   startTimer();
 };

@@ -18,6 +18,28 @@ inputs.forEach((input) => {
   input.addEventListener("blur", remcl);
 });
 
+// Variable to store the uploaded image
+let uploadedImageSrc = null;
+
+function triggerFileInput(inputId) {
+  document.getElementById(inputId).click();
+}
+
+function previewImage(input, avatarId) {
+  const file = input.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      document.getElementById(avatarId).src = e.target.result;
+      if (avatarId === "signupAvatar") {
+        uploadedImageSrc = e.target.result;
+        localStorage.setItem("studentImage", e.target.result);
+      }
+    };
+    reader.readAsDataURL(file);
+  }
+}
+
 // Feedback Message
 function displayFeedback(message, type, formType) {
   const feedbackElement =
@@ -111,6 +133,11 @@ function showLoginForm() {
 
   loginForm.classList.add("active");
   loginForm.style.opacity = 1;
+
+  // If an image was uploaded during signup, display it in the login form
+  if (uploadedImageSrc) {
+    document.getElementById("loginAvatar").src = uploadedImageSrc;
+  }
 }
 
 // Sign Up Animation

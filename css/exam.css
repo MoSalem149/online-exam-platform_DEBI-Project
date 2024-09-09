@@ -6,7 +6,6 @@ body {
   flex-direction: column;
   font-family: "Poppins", sans-serif;
   color: #333;
-  overflow: auto;
 }
 
 .exam-page {
@@ -39,7 +38,11 @@ body {
 
 #user-info:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+}
+
+#user-info img {
+  margin-left: 15px;
 }
 
 #student-name {
@@ -102,6 +105,8 @@ progress::-moz-progress-bar {
   color: #deac80;
   background-color: #ffffff;
   padding: 10px 20px;
+  width: 90px;
+  text-align: center;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease;
@@ -150,13 +155,9 @@ progress::-moz-progress-bar {
   transform: translateX(5px);
 }
 
-.submit-container {
-  margin-top: auto;
-}
-
 .exam-container {
   flex: 1;
-  padding: 40px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -200,6 +201,7 @@ progress::-moz-progress-bar {
   border-radius: 8px;
   border: 1px solid #eaeaea;
   cursor: pointer;
+  text-align: left;
   transition: background-color 0.3s ease, border 0.3s ease, transform 0.2s ease;
 }
 
@@ -218,7 +220,7 @@ progress::-moz-progress-bar {
 .controls {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 }
 
 .control-btn {
@@ -234,8 +236,7 @@ progress::-moz-progress-bar {
 }
 
 .control-btn:hover {
-  background-color: #deac80;
-  transform: scale(1.05);
+  background-color: #48a288d8;
 }
 
 .control-btn:disabled {
@@ -262,6 +263,10 @@ progress::-moz-progress-bar {
 }
 
 @media (max-width: 992px) {
+  body {
+    overflow: auto;
+  }
+
   .sidebar {
     width: 35%;
   }
@@ -278,9 +283,25 @@ progress::-moz-progress-bar {
   .question-box {
     font-size: 1.1rem;
   }
+
+  #user-info {
+    flex-direction: column;
+  }
+
+  #timer {
+    font-size: 1rem;
+  }
+
+  progress {
+    width: 100px;
+  }
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
   .exam-container {
     margin: 0;
     padding: 20px;
@@ -302,9 +323,25 @@ progress::-moz-progress-bar {
     width: 100%;
     padding: 12px 15px;
   }
+
+  #user-info {
+    flex-direction: column;
+  }
+
+  #timer {
+    font-size: 1rem;
+  }
+
+  progress {
+    width: 100px;
+  }
 }
 
 @media (max-width: 576px) {
+  body {
+    overflow: auto;
+  }
+
   .exam-header {
     flex-direction: column;
     gap: 10px;
@@ -328,6 +365,10 @@ progress::-moz-progress-bar {
   }
 
   #timer {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  progress {
+    width: 100px;
   }
 }

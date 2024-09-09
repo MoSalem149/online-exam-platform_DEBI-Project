@@ -30,7 +30,7 @@
 }
 
 .welcome-content p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #555;
   margin-bottom: 30px;
   opacity: 0;
@@ -145,7 +145,7 @@
   }
 
   .welcome-content p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 
@@ -172,7 +172,7 @@
   }
 
   .welcome-content p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 
   .btn {

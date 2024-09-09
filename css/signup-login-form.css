@@ -14,6 +14,26 @@
   align-items: center;
 }
 
+.file-input {
+  display: none;
+}
+
+.upload-btn {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #48a289;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #48a288d8;
+}
+
 .login-content {
   display: flex;
   justify-content: flex-start;
