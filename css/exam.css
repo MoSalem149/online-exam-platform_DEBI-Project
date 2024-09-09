@@ -20,7 +20,7 @@ body {
   align-items: center;
   background-color: #48a289;
   color: white;
-  padding: 20px;
+  padding: 40px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid #eaeaea;
 }
@@ -260,6 +260,18 @@ progress::-moz-progress-bar {
     padding: 30px;
     margin: 15px;
   }
+
+  #user-info {
+    flex-direction: column;
+  }
+
+  #timer {
+    font-size: 1rem;
+  }
+
+  progress {
+    width: 100px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -300,6 +312,10 @@ progress::-moz-progress-bar {
 @media (max-width: 768px) {
   body {
     overflow: auto;
+  }
+
+  .exam-header {
+    padding-top: 40px;
   }
 
   .exam-container {

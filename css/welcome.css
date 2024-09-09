@@ -130,6 +130,11 @@
     text-align: center;
   }
 
+  .welcome-content p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
   .btn {
     width: 240px;
   }
@@ -172,6 +177,7 @@
   }
 
   .welcome-content p {
+    text-align: center;
     font-size: 0.7rem;
   }
 
