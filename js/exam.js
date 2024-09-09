@@ -9,6 +9,12 @@ async function loadQuestions() {
     const response = await fetch("api/exam_api.json");
     const data = await response.json();
     questions = data.data.questions;
+
+    const savedAnswers = localStorage.getItem("selectedAnswers");
+    if (savedAnswers) {
+      Object.assign(selectedAnswers, JSON.parse(savedAnswers));
+    }
+
     loadQuestion(currentQuestionIndex);
     startTimer();
   } catch (error) {
@@ -28,9 +34,11 @@ function loadQuestion(index) {
     const answerButton = document.createElement("button");
     answerButton.textContent = answer;
     answerButton.classList.add("answer-item");
+
     if (selectedAnswers[index] === i) {
       answerButton.classList.add("selected");
     }
+
     answerButton.addEventListener("click", () => selectAnswer(i));
     answersContainer.appendChild(answerButton);
   });
@@ -54,6 +62,8 @@ function selectAnswer(selectedIndex) {
     if (index === selectedIndex) {
       button.classList.add("selected");
       selectedAnswers[currentQuestionIndex] = selectedIndex;
+
+      localStorage.setItem("selectedAnswers", JSON.stringify(selectedAnswers));
     } else {
       button.classList.remove("selected");
     }
@@ -131,6 +141,8 @@ function calculateResult() {
 
   localStorage.setItem("studentScore", score.toFixed(2));
 
+  // Clear saved answers from localStorage
+  localStorage.removeItem("selectedAnswers");
   localStorage.removeItem("remainingTime");
 
   window.location.href = "result.html";
