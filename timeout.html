@@ -22,14 +22,13 @@
       <div class="message-content">
         <h2>Time is out, sorry!</h2>
         <p>Your time has expired. Please retake the exam.</p>
-        <a
-          href="exam.html"
-          onclick="localStorage.removeItem('flaggedQuestions'); localStorage.removeItem('selectedAnswers'); localStorage.setItem('remainingTime', 600);"
-        >
-          <button class="btn">
-            <i class="fas fa-redo"></i> Retake the Exam
-          </button>
-        </a>
+        <a href="exam.html" onclick="
+  localStorage.removeItem('flaggedQuestions');
+  localStorage.removeItem('selectedAnswers');
+  localStorage.removeItem('remainingTime');
+  localStorage.setItem('timerReset', 'true');">
+  <button class="btn"><i class="fas fa-redo"></i> Retake the Exam</button>
+</a>
       </div>
     </div>
   </body>
