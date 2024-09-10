@@ -326,6 +326,12 @@ a:hover {
   .login-content h2 {
     font-size: 2rem;
   }
+
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -349,6 +355,12 @@ a:hover {
   .btn {
     height: 45px;
     font-size: 1rem;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 }
 
