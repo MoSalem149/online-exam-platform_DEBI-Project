@@ -158,22 +158,15 @@ let timerInterval;
 function startTimer() {
   const timerElement = document.getElementById("timer");
 
-  // Check if the exam is being retaken
-  const isRetake = localStorage.getItem('timerReset');
-
-  if (isRetake === 'true') {
-    // Reset the timer and remove the flag
-    timerDuration = 10 * 60;
-    localStorage.removeItem('timerReset');
-  } else {
-    // Retrieve remaining time if it exists
-    const savedTimer = localStorage.getItem("remainingTime");
-    if (savedTimer !== null) {
-      timerDuration = parseInt(savedTimer, 10);
-    }
+  if (timerInterval) {
+    clearInterval(timerInterval);
   }
 
-  // Continue the rest of your timer code...
+  const savedTimer = localStorage.getItem("remainingTime");
+  if (savedTimer !== null) {
+    timerDuration = parseInt(savedTimer, 10);
+  }
+
   timerInterval = setInterval(function () {
     let minutes = Math.floor(timerDuration / 60);
     let seconds = timerDuration % 60;
