@@ -121,13 +121,6 @@ function validateLogin() {
       "login"
     );
   }
-
-  if (loginSuccess) {
-    localStorage.removeItem("flaggedQuestions");
-    localStorage.removeItem("selectedAnswers");
-    localStorage.removeItem("remainingTime");
-    window.location.href = "welcome.html";
-  }
 }
 
 // Login Animation

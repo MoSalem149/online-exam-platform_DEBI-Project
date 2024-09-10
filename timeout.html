@@ -22,10 +22,7 @@
       <div class="message-content">
         <h2>Time is out, sorry!</h2>
         <p>Your time has expired. Please retake the exam.</p>
-        <a
-          href="exam.html"
-          onclick="localStorage.removeItem('flaggedQuestions'); localStorage.removeItem('selectedAnswers'); localStorage.removeItem('remainingTime')"
-        >
+        <a href="exam.html" onclick="localStorage.removeItem('remainingTime')">
           <button class="btn">
             <i class="fas fa-redo"></i> Retake the Exam
           </button>
