@@ -111,6 +111,7 @@ function validateLogin() {
       "success",
       "login"
     );
+
     setTimeout(() => {
       window.location.href = "welcome.html";
     }, 1500);
@@ -158,3 +159,12 @@ function showSignupForm() {
   signupForm.classList.add("active");
   signupForm.style.opacity = 1;
 }
+
+window.onload = function () {
+  localStorage.removeItem("studentName");
+  localStorage.removeItem("studentID");
+  localStorage.removeItem("studentImage");
+  localStorage.removeItem("studentScore");
+  localStorage.removeItem("studentScore");
+  localStorage.removeItem("remainingTime");
+};
