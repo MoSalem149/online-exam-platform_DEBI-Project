@@ -132,12 +132,17 @@ progress::-moz-progress-bar {
   flex-direction: column;
   gap: 15px;
   border-right: 2px solid #eaeaea;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 #flagged-questions {
   list-style: none;
   padding: 0;
+  margin: 0;
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-grow: 1;
 }
 
 #flagged-questions li {
@@ -275,12 +280,12 @@ progress::-moz-progress-bar {
 }
 
 @media (max-width: 992px) {
-  body {
-    overflow: auto;
-  }
-
   .sidebar {
     width: 35%;
+  }
+
+  .exam-header {
+    gap: 10px;
   }
 
   .exam-container {
@@ -289,7 +294,8 @@ progress::-moz-progress-bar {
   }
 
   .control-btn {
-    padding: 12px 20px;
+    padding: 10px;
+    font-size: 1rem;
   }
 
   .question-box {
@@ -331,6 +337,10 @@ progress::-moz-progress-bar {
     margin-bottom: 10px;
   }
 
+  #flagged-questions {
+    max-height: 200px;
+  }
+
   .exam-body {
     flex-direction: column;
   }
@@ -363,13 +373,17 @@ progress::-moz-progress-bar {
     gap: 10px;
   }
 
+  .exam-header h1 {
+    font-size: 1.7rem;
+  }
+
   .exam-container {
     padding: 15px;
   }
 
   .control-btn {
-    padding: 10px;
-    font-size: 14px;
+    padding: 8px;
+    font-size: 12px;
   }
 
   .question-box {

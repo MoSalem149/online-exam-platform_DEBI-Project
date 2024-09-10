@@ -89,10 +89,12 @@ document.getElementById("flag-btn").addEventListener("click", () => {
   const flagBtn = document.getElementById("flag-btn");
 
   if (flaggedQuestions.has(currentQuestionIndex)) {
+    // Remove from flagged questions
     flaggedQuestions.delete(currentQuestionIndex);
     flagBtn.classList.remove("flagged");
     flagBtn.innerHTML = '<i class="bi bi-flag"></i>';
 
+    // Remove the question from the list
     const listItem = document.querySelector(
       `li[data-question-index="${currentQuestionIndex}"]`
     );
@@ -100,23 +102,26 @@ document.getElementById("flag-btn").addEventListener("click", () => {
       flaggedList.removeChild(listItem);
     }
   } else {
+    // Add to flagged questions
     flaggedQuestions.add(currentQuestionIndex);
     flagBtn.classList.add("flagged");
     flagBtn.textContent = "Unflag";
 
+    // Create a new list item for the flagged question
     const listItem = document.createElement("li");
     listItem.textContent = `Question ${currentQuestionIndex + 1}`;
     listItem.dataset.questionIndex = currentQuestionIndex;
 
+    // Add click event to navigate to the flagged question
     listItem.addEventListener("click", function () {
       currentQuestionIndex = parseInt(this.dataset.questionIndex);
       loadQuestion(currentQuestionIndex);
     });
 
-    flaggedList.appendChild(listItem);
+    // Prepend the new flagged question to the top of the list
+    flaggedList.prepend(listItem);
   }
 });
-
 function updateProgress() {
   const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
   document.getElementById("exam-progress").value = progress;
