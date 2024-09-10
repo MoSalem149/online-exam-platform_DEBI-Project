@@ -388,6 +388,7 @@ progress::-moz-progress-bar {
 
   .question-box {
     font-size: 1rem;
+    overflow: hidden;
   }
 
   #user-info {

@@ -89,12 +89,10 @@ document.getElementById("flag-btn").addEventListener("click", () => {
   const flagBtn = document.getElementById("flag-btn");
 
   if (flaggedQuestions.has(currentQuestionIndex)) {
-    // Remove from flagged questions
     flaggedQuestions.delete(currentQuestionIndex);
     flagBtn.classList.remove("flagged");
     flagBtn.innerHTML = '<i class="bi bi-flag"></i>';
 
-    // Remove the question from the list
     const listItem = document.querySelector(
       `li[data-question-index="${currentQuestionIndex}"]`
     );
@@ -102,26 +100,28 @@ document.getElementById("flag-btn").addEventListener("click", () => {
       flaggedList.removeChild(listItem);
     }
   } else {
-    // Add to flagged questions
     flaggedQuestions.add(currentQuestionIndex);
     flagBtn.classList.add("flagged");
     flagBtn.textContent = "Unflag";
 
-    // Create a new list item for the flagged question
     const listItem = document.createElement("li");
     listItem.textContent = `Question ${currentQuestionIndex + 1}`;
     listItem.dataset.questionIndex = currentQuestionIndex;
 
-    // Add click event to navigate to the flagged question
     listItem.addEventListener("click", function () {
       currentQuestionIndex = parseInt(this.dataset.questionIndex);
       loadQuestion(currentQuestionIndex);
     });
 
-    // Prepend the new flagged question to the top of the list
     flaggedList.prepend(listItem);
   }
+
+  localStorage.setItem(
+    "flaggedQuestions",
+    JSON.stringify([...flaggedQuestions])
+  );
 });
+
 function updateProgress() {
   const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
   document.getElementById("exam-progress").value = progress;
@@ -193,12 +193,11 @@ window.onload = function () {
 
   const storedStudentName = localStorage.getItem("studentName");
   const storedStudentID = localStorage.getItem("studentID");
-  const storedStudentImage = localStorage.getItem("studentImage"); // Get image from localStorage
+  const storedStudentImage = localStorage.getItem("studentImage");
 
   const loggedInStudentName = storedStudentName ? storedStudentName : "Unknown";
   const loggedInStudentID = storedStudentID ? storedStudentID : "Unknown";
 
-  // Set student name and ID
   document.getElementById(
     "student-name"
   ).textContent = `Name: ${loggedInStudentName}`;
@@ -206,15 +205,35 @@ window.onload = function () {
     "student-id"
   ).textContent = `ID: ${loggedInStudentID}`;
 
-  // Set the student image if it exists
   if (storedStudentImage) {
     const imgElement = document.createElement("img");
     imgElement.src = storedStudentImage;
     imgElement.alt = "Student Image";
-    imgElement.style.width = "50px"; // Adjust the size as needed
+    imgElement.style.width = "50px";
     imgElement.style.height = "50px";
-    imgElement.style.borderRadius = "50%"; // Make it circular
+    imgElement.style.borderRadius = "50%";
     document.getElementById("user-info").appendChild(imgElement);
+  }
+
+  const savedFlaggedQuestions = localStorage.getItem("flaggedQuestions");
+  if (savedFlaggedQuestions) {
+    const flaggedArray = JSON.parse(savedFlaggedQuestions);
+    flaggedArray.forEach((questionIndex) =>
+      flaggedQuestions.add(questionIndex)
+    );
+
+    flaggedArray.forEach((questionIndex) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = `Question ${questionIndex + 1}`;
+      listItem.dataset.questionIndex = questionIndex;
+
+      listItem.addEventListener("click", function () {
+        currentQuestionIndex = parseInt(this.dataset.questionIndex);
+        loadQuestion(currentQuestionIndex);
+      });
+
+      document.getElementById("flagged-questions").prepend(listItem);
+    });
   }
 
   startTimer();
