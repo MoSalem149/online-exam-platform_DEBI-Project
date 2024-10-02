@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to the Exam</title>
+    <link
+      rel="icon"
+      href="./assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/welcome.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="welcome-content">
+        <img
+          class="small-screen-img"
+          src="assets/images/svg/online-test-img.svg"
+          alt="Online Test Image"
+        />
+        <h1>Welcome to the Exam</h1>
+        <p>
+          Click the button below to start your exam. The exam consists of 20
+          questions, and you have 10 minutes to complete it. Good luck!
+        </p>
+        <a
+          href="exam.html"
+          onclick="localStorage.removeItem('flaggedQuestions'); localStorage.removeItem('selectedAnswers'); localStorage.removeItem('remainingTime')"
+        >
+          <button class="btn"><i class="fas fa-check"></i> Start Exam</button>
+        </a>
+      </div>
+      <div class="img">
+        <img
+          src="assets/images/svg/online-test-img.svg"
+          alt="Online Test Image"
+        />
+      </div>
+      <script src="js/goBackButtonDisable.js"></script>
+    </div>
+  </body>
+</html>

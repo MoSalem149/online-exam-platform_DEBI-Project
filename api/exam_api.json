@@ -1,0 +1,193 @@
+{
+  "status": "success",
+  "message": "Quiz questions fetched successfully",
+  "data": {
+    "questions": [
+      {
+        "id": 1,
+        "question": "What does the element in HTML5 represent?",
+        "options": [
+          "A section of content that is self-contained",
+          "An inline element",
+          "A block of text within a paragraph",
+          "A navigational link"
+        ],
+        "correctAnswer": "A section of content that is self-contained",
+        "category": "HTML"
+      },
+      {
+        "id": 2,
+        "question": "Which HTML5 element is used for playing audio files?",
+        "options": ["<audio>", "<video>", "<media>", "<sound>"],
+        "correctAnswer": "<audio>",
+        "category": "HTML"
+      },
+      {
+        "id": 3,
+        "question": "Which of the following is a new input type introduced in HTML5?",
+        "options": ["date", "checkbox", "text", "submit"],
+        "correctAnswer": "date",
+        "category": "HTML"
+      },
+      {
+        "id": 4,
+        "question": "Which element is used to embed an external resource, such as a webpage or a video, into an HTML document?",
+        "options": ["<media>", "<object>", "<iframe>", "<embed>"],
+        "correctAnswer": "<iframe>",
+        "category": "HTML"
+      },
+      {
+        "id": 5,
+        "question": "Which CSS property controls the text size?",
+        "options": ["text-size", "font-size", "size", "font-style"],
+        "correctAnswer": "font-size",
+        "category": "CSS"
+      },
+      {
+        "id": 6,
+        "question": "What is the correct syntax to add a border with a width of 1px, solid style, and red color to an element in CSS?",
+        "options": [
+          "border-color: red solid 1px;",
+          "border: 1px solid red;",
+          "border-width: 1px; border-style: solid; border-color: red;",
+          "border-style: solid 1px red;"
+        ],
+        "correctAnswer": "border: 1px solid red;",
+        "category": "CSS"
+      },
+      {
+        "id": 7,
+        "question": "Which property is used to change the background color of an element in CSS?",
+        "options": ["bgcolor", "color", "background-color", "background"],
+        "correctAnswer": "background-color",
+        "category": "CSS"
+      },
+      {
+        "id": 8,
+        "question": "How do you apply a class to an element in HTML?",
+        "options": [
+          "<div id='classname'>",
+          "<div style='classname'>",
+          "<div name='classname'>",
+          "<div class='classname'>"
+        ],
+        "correctAnswer": "<div class='classname'>",
+        "category": "HTML"
+      },
+      {
+        "id": 9,
+        "question": "Which is the correct way to apply multiple background images to an element in CSS?",
+        "options": [
+          "background-images: url(image1.png) url(image2.png);",
+          "background-image: url(image1.png), url(image2.png);",
+          "background: image1.png, image2.png;",
+          "background-image: url(image1.png) and url(image2.png);"
+        ],
+        "correctAnswer": "background-image: url(image1.png), url(image2.png);",
+        "category": "CSS"
+      },
+      {
+        "id": 10,
+        "question": "How can you make a list that displays its items with squares instead of bullets?",
+        "options": [
+          "marker-style: square;",
+          "list-type: square;",
+          "bullet-type: square;",
+          "list-style-type: square;"
+        ],
+        "correctAnswer": "list-style-type: square;",
+        "category": "CSS"
+      },
+      {
+        "id": 11,
+        "question": "Which is the correct way to declare a variable in JavaScript?",
+        "options": [
+          "let x = 5;",
+          "var x = 5;",
+          "const x = 5;",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "category": "JavaScript"
+      },
+      {
+        "id": 12,
+        "question": "What is the output of console.log(typeof 42); in JavaScript?",
+        "options": ["number", "string", "integer", "float"],
+        "correctAnswer": "number",
+        "category": "JavaScript"
+      },
+      {
+        "id": 13,
+        "question": "How do you create a function in JavaScript?",
+        "options": [
+          "function: myFunction() {}",
+          "function myFunction() {}",
+          "def myFunction() {}",
+          "create function myFunction() {}"
+        ],
+        "correctAnswer": "function myFunction() {}",
+        "category": "JavaScript"
+      },
+      {
+        "id": 14,
+        "question": "What will be the output of console.log('2' + 2); in JavaScript?",
+        "options": ["\"22\"", "\"4\"", "Error", "4"],
+        "correctAnswer": "\"22\"",
+        "category": "JavaScript"
+      },
+      {
+        "id": 15,
+        "question": "How do you write a for loop in JavaScript?",
+        "options": [
+          "for (i = 0; i < 5; i++)",
+          "for (let i = 0; i < 5; i++) {}",
+          "for (i = 0 to 5) {}",
+          "for i in range(0, 5) {}"
+        ],
+        "correctAnswer": "for (let i = 0; i < 5; i++) {}",
+        "category": "JavaScript"
+      },
+      {
+        "id": 16,
+        "question": "Which event occurs when the user clicks on an HTML element in JavaScript?",
+        "options": ["onmouseover", "onpress", "onclick", "onhover"],
+        "correctAnswer": "onclick",
+        "category": "JavaScript"
+      },
+      {
+        "id": 17,
+        "question": "Which method removes the last element from an array in JavaScript?",
+        "options": ["unshift()", "pop()", "push()", "shift()"],
+        "correctAnswer": "pop()",
+        "category": "JavaScript"
+      },
+      {
+        "id": 18,
+        "question": "Which keyword is used to return a value from a function in JavaScript?",
+        "options": ["continue", "yield", "return", "break"],
+        "correctAnswer": "return",
+        "category": "JavaScript"
+      },
+      {
+        "id": 19,
+        "question": "Which method is used to round a number to the nearest integer in JavaScript?",
+        "options": [
+          "Math.round()",
+          "Math.floor()",
+          "Math.ceil()",
+          "Math.random()"
+        ],
+        "correctAnswer": "Math.round()",
+        "category": "JavaScript"
+      },
+      {
+        "id": 20,
+        "question": "Which of the following is a feature of React?",
+        "options": ["Virtual DOM", "Data Binding", "JSX", "All of the above"],
+        "correctAnswer": "All of the above",
+        "category": "React"
+      }
+    ]
+  }
+}

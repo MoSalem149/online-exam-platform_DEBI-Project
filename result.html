@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Results</title>
+    <link
+      rel="icon"
+      href="./assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/result.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="result-content">
+        <img
+          src="assets/images/png/results-img.png"
+          class="small-screen-img"
+          alt="Result Image"
+        />
+        <h2>Exam Result</h2>
+        <p>Name: <span id="studentName"></span></p>
+        <p>ID: <span id="studentID"></span></p>
+        <p>Score: <span id="studentScore"></span></p>
+        <a
+          href="index.html"
+          onclick="localStorage.removeItem('flaggedQuestions'); localStorage.removeItem('selectedAnswers'); localStorage.removeItem('remainingTime'),localStorage.removeItem('studentName'), localStorage.removeItem('studentID'), localStorage.removeItem('studentScore'), localStorage.removeItem('studentImage')"
+        >
+          <button class="btn"><i class="fas fa-home"></i> Return Home</button>
+        </a>
+      </div>
+      <div class="img">
+        <img src="assets/images/png/results-img.png" alt="Result Image" />
+      </div>
+    </div>
+    <script src="js/result.js"></script>
+  </body>
+</html>

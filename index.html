@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup and Login Form</title>
+    <link
+      rel="icon"
+      href="./assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/signup-login-form.css" />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src="assets/images/svg/signup-login-bg.svg" />
+      </div>
+      <div class="login-content">
+        <!-- Signup Form -->
+        <form id="signupForm" class="form active">
+          <img src="assets/images/svg/avatar.svg" id="signupAvatar" />
+          <input
+            type="file"
+            id="signupImageInput"
+            class="file-input"
+            accept="image/*"
+            onchange="previewImage(this, 'signupAvatar')"
+          />
+          <button
+            type="button"
+            class="upload-btn"
+            onclick="triggerFileInput('signupImageInput')"
+          >
+            Upload Image
+          </button>
+          <h2 class="title">Sign Up</h2>
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="div">
+              <h5>Student Name</h5>
+              <input type="text" class="input" id="SignupstudentName" />
+            </div>
+          </div>
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <div class="div">
+              <h5>Student ID</h5>
+              <input type="text" class="input" id="SignupstudentID" />
+            </div>
+          </div>
+          <input
+            type="button"
+            class="btn"
+            value="Sign Up"
+            onclick="validateSignup()"
+          />
+          <a href="#" class="toggle-link" onclick="showLoginForm()"
+            >Already have an account? Login here</a
+          >
+          <div id="signupFeedback" class="feedback-message"></div>
+        </form>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="form">
+          <img src="assets/images/svg/avatar.svg" id="loginAvatar" />
+          <input
+            type="file"
+            id="loginImageInput"
+            class="file-input"
+            accept="image/*"
+            onchange="previewImage(this, 'loginAvatar')"
+          />
+          <h2 class="title">Login</h2>
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="div">
+              <h5>Student Name</h5>
+              <input type="text" class="input" id="loginStudentName" />
+            </div>
+          </div>
+          <div class="input-div pass">
+            <div class="i">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <div class="div">
+              <h5>Student ID</h5>
+              <input type="password" class="input" id="loginStudentID" />
+            </div>
+          </div>
+          <input
+            type="button"
+            class="btn"
+            value="Login"
+            onclick="validateLogin()"
+          />
+          <a href="#" class="toggle-link" onclick="showSignupForm()"
+            >Don't have an account? Sign up here</a
+          >
+          <div id="loginFeedback" class="feedback-message"></div>
+        </form>
+      </div>
+    </div>
+    <script src="js/signupLoginForm.js"></script>
+  </body>
+</html>

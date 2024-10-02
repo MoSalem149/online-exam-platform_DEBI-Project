@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time's Out</title>
+    <link
+      rel="icon"
+      href="./assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/timeout.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="assets/images/gif/time-out-img.gif"
+        alt="Time Out GIF"
+        class="timeout-gif"
+      />
+      <div class="message-content">
+        <h2>Time is out, sorry!</h2>
+        <p>Your time has expired. Please retake the exam.</p>
+        <a
+          href="exam.html"
+          onclick="localStorage.removeItem('flaggedQuestions'); localStorage.removeItem('selectedAnswers'); localStorage.setItem('remainingTime', 600);"
+        >
+          <button class="btn">
+            <i class="fas fa-redo"></i> Retake the Exam
+          </button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

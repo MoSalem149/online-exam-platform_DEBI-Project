@@ -1,0 +1,46 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Font Awesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+/* Bootstrap */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css");
+
+/* Rest Style */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #48a289 #f0f0f0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Scroll Bar Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #48a289;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #38d39f;
+}

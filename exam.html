@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Examination</title>
+    <link
+      rel="icon"
+      href="./assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="css/exam.css" />
+  </head>
+  <body>
+    <div class="exam-page">
+      <header class="exam-header">
+        <h1>Online Examination</h1>
+        <div id="user-info">
+          <span id="student-name">Name: Unknown</span>
+          <span id="student-id">ID: Unknown</span>
+        </div>
+        <div class="progress-bar">
+          <progress id="exam-progress" value="0" max="100"></progress>
+          <span id="progress-text">0% Completed</span>
+        </div>
+        <div id="timer">10:00</div>
+      </header>
+
+      <div class="exam-body">
+        <nav class="sidebar">
+          <h3>Flagged Questions</h3>
+          <ul id="flagged-questions"></ul>
+        </nav>
+
+        <main class="exam-container">
+          <div class="question-section">
+            <div id="question-container" class="question-box"></div>
+            <div id="answers-container" class="answers-box"></div>
+          </div>
+
+          <div class="controls">
+            <button id="prev-btn" class="control-btn">
+              <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <button id="flag-btn" class="control-btn">
+              <i class="fas fa-flag"></i> Flag
+            </button>
+            <button id="next-btn" class="control-btn">
+              Next <i class="fas fa-chevron-right"></i>
+            </button>
+            <button id="submit-btn" class="control-btn">
+              <i class="bi bi-check-circle"></i> Submit
+            </button>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="js/goBackButtonDisable.js"></script>
+    <script src="js/exam.js"></script>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+/* Main Style */
+body {
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.timeout-gif {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+  animation: scaleIn 2s ease-in-out;
+}
+
+.message-content h2 {
+  font-size: 3rem;
+  color: #32be8f;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.message-content p {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 20px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.btn {
+  width: 240px;
+  font-weight: bold;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+  background-size: 200%;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.8s;
+  animation: fadeIn 3.5s ease-in-out;
+}
+
+.btn:hover {
+  background-position: right;
+}
+
+.btn i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Animation Key Frames */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 900px) {
+  .timeout-gif {
+    width: 150px;
+    height: 150px;
+  }
+
+  .message-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .message-content p {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 240px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  .timeout-gif {
+    width: 120px;
+    height: 120px;
+  }
+
+  .message-content h2 {
+    font-size: 2rem;
+  }
+
+  .message-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 210px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .message-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .message-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 180px;
+    height: 38px;
+    font-size: 0.8rem;
+  }
+}
