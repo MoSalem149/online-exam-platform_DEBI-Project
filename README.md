@@ -66,4 +66,4 @@ A modern, responsive online exam platform featuring sign-up/login functionality,
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/MoSalem149v2/Online-Exam-Platform_DEBI-Project.git
+   git clone https://github.com/MoSalem149/Online-Exam-Platform_DEBI-Project.git
